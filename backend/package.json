@@ -2,5 +2,7 @@
   "name": "vtb-hack-workwolf-backend",
   "version": "1.0.0",
   "license": "ISC",
-  "scripts": {}
+  "scripts": {
+    "prepare": "cd .. && npm run prepare"
+  }
 }

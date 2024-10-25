@@ -1,0 +1,16 @@
+message="$(cat $1)"
+requiredPattern="^(front|back|all): .*$"
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo
+  echo "---"
+  echo "🚨🚨🚨\033[31m Неправильный формат коммита! \033[m🚨🚨🚨"
+  echo
+  echo "Вы написали прекрасный код, но не указали где были изменения (front/back/all) 😟"
+  echo "Например: \"front: исправил баг в запросе\""
+  echo 
+  echo "Ваш коммит: \"$message\""
+  echo "---"
+  echo
+  exit 1
+fi

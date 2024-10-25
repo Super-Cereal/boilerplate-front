@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import { Modal } from "@/shared/ui/modal";
 
-import s from "./app.module.css";
 import "./app.css";
+import s from "./app.module.css";
 
 export const App = () => {
   const [modalOpened, setModalOpened] = useState(false);

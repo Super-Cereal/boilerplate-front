@@ -1,6 +1,9 @@
-# npm run eslint
-# npm run tsx
-
-# В lint-staged только prettier:fix, потому что проверять eslint-ом только измененные файлы – это плохо,
+# В lint-staged только prettier:fix, 
+# потому что проверять eslint-ом или tsc только измененные файлы – это плохо,
 # ведь изменения могут поломать незатронутые файлы
 npx lint-staged
+
+cd frontend
+npm run eslint:check
+npm run typescript:check
+cd -

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import ReactDOM from "react-dom";
 import cx from "classnames";
 
@@ -6,7 +6,7 @@ import { ModalOverlay } from "./modal-overlay/modal-overlay";
 
 import styles from "./modal.module.css";
 
-interface IModalProps {
+interface ModalProps {
   /** Заголовок в модалке */
   title?: string;
 
@@ -20,10 +20,10 @@ interface IModalProps {
   onClose: () => void;
 }
 
-const modalsRoot = document.getElementById("modal")!;
+const modalsRoot = document.querySelector("#modal")!;
 
-export const Modal = ({ title, className, children, onClose }: IModalProps) => {
-  React.useEffect(() => {
+export const Modal = ({ title, className, children, onClose }: ModalProps) => {
+  useEffect(() => {
     const closeOnEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
@@ -45,7 +45,6 @@ export const Modal = ({ title, className, children, onClose }: IModalProps) => {
         <button className={styles.close} onClick={onClose}>
           ✕
         </button>
-        asd
         {children}
       </section>
     </ModalOverlay>,

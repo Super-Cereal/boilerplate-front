@@ -1,0 +1,14 @@
+.button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  padding: 0;
+  text-align: inherit;
+}
+
+.onlyScreenReaders {
+  color: transparent;
+  font-size: 0;
+}
