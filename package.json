@@ -1,7 +1,6 @@
 {
-  "name": "vtb-hack-workwolf",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "Проект команды workwolf на VTB API hackathon 2024",
   "license": "ISC",
   "scripts": {
     "deps": "npm i & (cd ./frontend && npm i) & (cd ./backend && npm i)",

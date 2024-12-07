@@ -1,18 +1,22 @@
 {
-  "name": "vtb-hack-workwolf-frontend",
+  "name": "boilerplate",
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack --mode=production",
-    "eslint:check": "eslint src",
+    "eslint:check": "eslint ./src",
+    "eslint:fix": "eslint ./src --fix",
     "typescript:check": "tsc",
     "prepare": "cd .. && npm run prepare"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.59.16",
     "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.9",
@@ -20,6 +24,8 @@
     "@babel/preset-react": "^7.25.9",
     "@babel/preset-typescript": "^7.25.9",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/lodash": "^4.17.13",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
@@ -28,6 +34,7 @@
     "css-loader": "^7.1.2",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-explicit-dependencies": "^1.4.0",
     "eslint-plugin-jsx-a11y": "^6.10.1",
     "eslint-plugin-nimbus-clean": "^1.4.2",
     "eslint-plugin-prettier": "^5.2.1",
@@ -35,6 +42,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sonarjs": "^1.0.4",
     "eslint-plugin-testing-library": "^6.4.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
@@ -44,7 +52,7 @@
     "sass": "^1.80.4",
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",
-    "typescript": "^5.6.3",
+    "typescript": "5.5",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"

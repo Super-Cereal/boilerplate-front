@@ -3,7 +3,20 @@
 # ведь изменения могут поломать незатронутые файлы
 npx lint-staged
 
+echo
+echo "---"
+echo "\033[33m Проверка фронтенда \033[m"
 cd frontend
 npm run eslint:check
 npm run typescript:check
 cd -
+
+echo
+echo "---"
+
+# echo "\033[33m Проверка бекенда \033[m"
+# cd backend
+# npm run eslint:check
+# npm run typescript:check
+# cd -
+# echo "---"

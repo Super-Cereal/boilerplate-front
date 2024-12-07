@@ -79,12 +79,14 @@ module.exports = {
     path: path.join(__dirname, "dist"), // Директория, в которой будет размещаться итоговый бандл
     filename: "index.js",
     clean: true, // Очищает директорию dist перед обновлением бандла
+    publicPath: "/",
   },
 
   devtool: "source-map",
   devServer: {
     open: true,
     hot: true, // Включает автоматическую перезагрузку страницы при изменениях
+    historyApiFallback: true,
   },
 
   resolve: {

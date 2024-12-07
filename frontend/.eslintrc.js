@@ -9,7 +9,7 @@ module.exports = {
     "plugin:nimbus-clean/react",
     "plugin:nimbus-clean/promise",
     // "plugin:nimbus-clean/unicorn",
-    // "plugin:nimbus-clean/sonarjs",
+    "plugin:nimbus-clean/sonarjs",
     "plugin:nimbus-clean/typescript",
     // "plugin:nimbus-clean/perfectionist",
   ],
@@ -27,10 +27,11 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: "module",
   },
-  plugins: ["nimbus-clean"],
+  plugins: ["nimbus-clean", "explicit-dependencies"],
 
   rules: {
     "@typescript-eslint/naming-convention": [0],
+    "explicit-dependencies/explicit": ["error", { dev: true }],
   },
 
   settings: {
